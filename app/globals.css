@@ -94,17 +94,77 @@ input[type="number"] {
   transition: all 0.4s ease-in-out;
   font-weight: 500;
   border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
 }
 
 .et_pb_button.et_pb_bg_layout_light {
-  background-color: var(--blue-accent);
+  background-image: url('/Denim.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: #fff;
-  border-color: var(--blue-accent);
+  border: 2px dashed rgba(255, 255, 255, 0.3);
 }
 
-.et_pb_button.et_pb_bg_layout_light:hover {
-  background-color: var(--blue-accent-dark);
-  border-color: var(--blue-accent-dark);
+.et_pb_button.et_pb_bg_layout_light::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(46, 163, 242, 0.8);
+  z-index: 0;
+}
+
+.et_pb_button.et_pb_bg_layout_light > * {
+  position: relative;
+  z-index: 1;
+}
+
+.et_pb_button.et_pb_bg_layout_light:hover::before {
+  background-color: rgba(30, 124, 194, 0.9);
+}
+
+/* Denim button class for main CTAs */
+.btn-denim {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  background-image: url('/Denim.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  border: 2px dashed rgba(255, 255, 255, 0.3);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.4s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-denim::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(46, 163, 242, 0.8);
+  z-index: 0;
+  transition: background-color 0.4s ease-in-out;
+}
+
+.btn-denim > * {
+  position: relative;
+  z-index: 1;
+}
+
+.btn-denim:hover::before {
+  background-color: rgba(30, 124, 194, 0.9);
 }
 
 /* Testimonial styles */

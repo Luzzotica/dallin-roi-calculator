@@ -86,7 +86,7 @@ export default function HomePage() {
                 href="https://www.youtube.com/watch?v=wsG6N6gpvm4"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-8 py-4 bg-[#2EA3F2] hover:bg-[#1e7cc2] text-white font-semibold transition-colors group"
+                className="btn-denim px-8 py-4 group"
               >
                 <svg className="mr-2 w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M8 5v14l11-7z" />
@@ -144,7 +144,7 @@ export default function HomePage() {
                 href="https://www.youtube.com/watch?v=wsG6N6gpvm4"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-6 py-3 bg-blue-accent hover:bg-blue-accent-dark text-white font-semibold rounded transition-colors"
+                className="btn-denim px-6 py-3"
               >
                 <svg className="mr-2 w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M8 5v14l11-7z" />
@@ -153,9 +153,9 @@ export default function HomePage() {
               </a>
               <a
                 href="https://www.youtube.com/watch?v=GgUqd_u84Vg"
-            target="_blank"
-            rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-6 py-3 border-2 border-white/30 text-white hover:bg-white/10 font-semibold rounded transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-denim px-6 py-3"
               >
                 <svg className="mr-2 w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M8 5v14l11-7z" />
@@ -253,7 +253,7 @@ export default function HomePage() {
                   )}
                   <Link
                     href={`/meeting-planners#book-now`}
-                    className="inline-flex items-center text-copper hover:text-copper-light transition-colors group"
+                    className="btn-denim px-6 py-3 inline-flex items-center group"
                   >
                     More About This Keynote
                     <svg
@@ -333,9 +333,9 @@ export default function HomePage() {
               </p>
               <a
                 href="https://www.amazon.com/dp/B0B167WWVM"
-            target="_blank"
-            rel="noopener noreferrer"
-                className="inline-flex items-center px-6 py-3 bg-copper hover:bg-copper-dark text-background font-semibold rounded transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-denim px-6 py-3"
               >
                 Order Now
               </a>
