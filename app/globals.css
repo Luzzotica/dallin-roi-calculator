@@ -127,44 +127,35 @@ input[type="number"] {
   background-color: rgba(30, 124, 194, 0.9);
 }
 
-/* Denim button class for main CTAs */
+/* Denim button class for main CTAs - matching dallincooper.com */
 .btn-denim {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 20px;
-  background-image: url('/Denim.jpg');
+  display: inline-block;
+  padding: 15px 80px;
+  background-image: linear-gradient(180deg, rgb(32 29 107 / 0.83) 0%, rgb(32 29 107 / 0.79) 100%), url('/Denim.jpg');
   background-size: cover;
-  background-position: center;
   background-repeat: no-repeat;
-  color: #fff;
-  border: 2px dashed rgba(255, 255, 255, 0.3);
+  background-position: center;
+  background-blend-mode: normal;
+  color: #FFFFFF !important;
   text-decoration: none;
-  font-weight: 500;
-  transition: all 0.4s ease-in-out;
+  font-family: var(--font-montserrat), 'Montserrat', Helvetica, Arial, sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 13px !important;
+  line-height: 1.7em !important;
+  border: 0 !important;
+  border-radius: 0;
+  outline: 1px dashed #D2A061;
+  outline-offset: -5px;
+  transition: all 300ms ease 0ms;
+  cursor: pointer;
   position: relative;
-  overflow: hidden;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
 }
 
-.btn-denim::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(46, 163, 242, 0.8);
-  z-index: 0;
-  transition: background-color 0.4s ease-in-out;
-}
-
-.btn-denim > * {
-  position: relative;
-  z-index: 1;
-}
-
-.btn-denim:hover::before {
-  background-color: rgba(30, 124, 194, 0.9);
+.btn-denim:hover {
+  background-image: linear-gradient(180deg, rgb(32 29 107 / 0.9) 0%, rgb(32 29 107 / 0.85) 100%), url('/Denim.jpg');
 }
 
 /* Testimonial styles */

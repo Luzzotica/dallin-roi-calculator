@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bitter, Open_Sans, Oswald } from "next/font/google";
+import { Bitter, Open_Sans, Oswald, Montserrat } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -23,6 +23,13 @@ const oswald = Oswald({
   subsets: ["latin"],
   display: "swap",
   weight: ["400", "500", "600", "700"],
+});
+
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
@@ -53,7 +60,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${bitter.variable} ${openSans.variable} ${oswald.variable} antialiased bg-background text-foreground`}
+        className={`${bitter.variable} ${openSans.variable} ${oswald.variable} ${montserrat.variable} antialiased bg-background text-foreground`}
         style={{ fontFamily: "'Open Sans', Helvetica, Arial, sans-serif" }}
       >
         <Header />

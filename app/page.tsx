@@ -86,7 +86,7 @@ export default function HomePage() {
                 href="https://www.youtube.com/watch?v=wsG6N6gpvm4"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-denim px-8 py-4 group"
+                className="btn-denim group"
               >
                 <svg className="mr-2 w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M8 5v14l11-7z" />
@@ -144,7 +144,7 @@ export default function HomePage() {
                 href="https://www.youtube.com/watch?v=wsG6N6gpvm4"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-denim px-6 py-3"
+                className="btn-denim"
               >
                 <svg className="mr-2 w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M8 5v14l11-7z" />
@@ -155,7 +155,7 @@ export default function HomePage() {
                 href="https://www.youtube.com/watch?v=GgUqd_u84Vg"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-denim px-6 py-3"
+                className="btn-denim"
               >
                 <svg className="mr-2 w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M8 5v14l11-7z" />
@@ -253,7 +253,7 @@ export default function HomePage() {
                   )}
                   <Link
                     href={`/meeting-planners#book-now`}
-                    className="btn-denim px-6 py-3 inline-flex items-center group"
+                    className="btn-denim inline-flex items-center group"
                   >
                     More About This Keynote
                     <svg
@@ -335,7 +335,7 @@ export default function HomePage() {
                 href="https://www.amazon.com/dp/B0B167WWVM"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-denim px-6 py-3"
+                className="btn-denim"
               >
                 Order Now
               </a>
