@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, Oswald } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -16,20 +18,21 @@ const oswald = Oswald({
 });
 
 export const metadata: Metadata = {
-  title: "Communication ROI Calculator | Dallin Cooper",
+  title: "Dallin Cooper | Leadership, Communication & Conflict Resolution Speaker",
   description:
-    "Calculate the cost of poor communication in your organization and discover how Dallin Cooper's keynotes, workshops, and trainings can transform your team.",
+    "Dallin Cooper is a leadership, conflict resolution, and communication speaker who helps audiences challenge their assumptions to communicate effectively and work with those they disagree with.",
   keywords: [
-    "communication training",
     "keynote speaker",
-    "workplace communication",
-    "ROI calculator",
+    "leadership speaker",
+    "communication training",
+    "conflict resolution",
     "Dallin Cooper",
+    "corporate speaker",
   ],
   openGraph: {
-    title: "Communication ROI Calculator | Dallin Cooper",
+    title: "Dallin Cooper | Keynote Speaker",
     description:
-      "Poor communication costs US businesses $1.2 trillion annually. Calculate your team's potential savings.",
+      "Leadership, conflict resolution, and communication speaker helping audiences challenge their assumptions.",
     type: "website",
   },
 };
@@ -44,7 +47,9 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${oswald.variable} antialiased bg-background text-foreground`}
       >
-        {children}
+        <Header />
+        <main className="pt-20">{children}</main>
+        <Footer />
       </body>
     </html>
   );
