@@ -1,13 +1,21 @@
 import type { Metadata } from "next";
-import { Inter, Oswald } from "next/font/google";
+import { Bitter, Open_Sans, Oswald } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const inter = Inter({
-  variable: "--font-inter",
+const bitter = Bitter({
+  variable: "--font-bitter",
   subsets: ["latin"],
   display: "swap",
+  weight: ["400", "500", "600", "700", "800", "900"],
+});
+
+const openSans = Open_Sans({
+  variable: "--font-open-sans",
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["300", "400", "500", "600", "700", "800"],
 });
 
 const oswald = Oswald({
@@ -45,7 +53,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${inter.variable} ${oswald.variable} antialiased bg-background text-foreground`}
+        className={`${bitter.variable} ${openSans.variable} ${oswald.variable} antialiased bg-background text-foreground`}
+        style={{ fontFamily: "'Open Sans', Helvetica, Arial, sans-serif" }}
       >
         <Header />
         <main className="pt-20">{children}</main>

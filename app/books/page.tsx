@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 
 const books = [
@@ -92,15 +93,13 @@ export default function BooksPage() {
 
               <div className="flex justify-center">
                 <div className="bg-card-bg rounded-2xl p-8 border border-card-border">
-                  <div className="w-64 h-80 bg-gradient-to-b from-copper/20 to-copper/5 rounded-lg flex items-center justify-center">
-                    <div className="text-center px-4">
-                      <span className="font-[var(--font-oswald)] text-2xl text-copper">
-                        GET ON THE BULL
-                      </span>
-                      <p className="text-text-secondary text-sm mt-2">
-                        By Dallin Cooper
-                      </p>
-                    </div>
+                  <div className="relative w-64 h-80 rounded-lg overflow-hidden">
+                    <Image
+                      src="/getonthebullbook.png"
+                      alt="Get On The Bull Book Cover"
+                      fill
+                      className="object-contain"
+                    />
                   </div>
                 </div>
               </div>

@@ -17,7 +17,7 @@ const keynotes = [
       author: "Andreia Crook",
       company: "Tennessee Medical Group Management Association",
     },
-    image: "/images/keynote-challenge.jpg",
+    image: "/Snapshot_413.jpg",
   },
   {
     id: "get-on-the-bull",
@@ -28,7 +28,7 @@ const keynotes = [
     themes: ["Leadership", "High-Performance", "Sales", "Customer Service"],
     testimonial: null,
     note: "*This program is available as either a standard keynote, or as an immersive, mechanical bull experience.",
-    image: "/images/keynote-bull.jpg",
+    image: "/Dallin-Cooper-5-1.png",
   },
   {
     id: "trust-gauntlet",
@@ -43,19 +43,19 @@ const keynotes = [
       title: "Director of Customer Engagement",
       company: "Boeing Defense, Space and Security",
     },
-    image: "/images/keynote-trust.jpg",
+    image: "/14-568-IMG_0771-scaled.jpg",
   },
 ];
 
 const clientLogos = [
-  "Meta",
-  "Charter",
-  "GE",
-  "MGMA",
-  "ABA",
-  "TEDx",
-  "RE/MAX",
-  "Boeing",
+  { name: "Meta", image: "/meta.png" },
+  { name: "Charter", image: "/charter.png" },
+  { name: "GE", image: null },
+  { name: "MGMA", image: "/megma.png" },
+  { name: "ABA", image: null },
+  { name: "TEDx", image: null },
+  { name: "RE/MAX", image: null },
+  { name: "Boeing", image: null },
 ];
 
 export default function HomePage() {
@@ -72,11 +72,11 @@ export default function HomePage() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="font-[var(--font-oswald)] text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
+            <h1 className="font-[var(--font-bitter)] text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
               CHALLENGE YOUR
               <br />
               <span className="text-copper">ASSUMPTIONS</span>
-            </h1>
+          </h1>
             <p className="text-xl text-text-secondary mb-8">
               How great leaders stop assuming the worst and start{" "}
               <span className="underline">asking for the best</span>
@@ -86,7 +86,7 @@ export default function HomePage() {
                 href="https://www.youtube.com/watch?v=wsG6N6gpvm4"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-8 py-4 bg-blue-accent hover:bg-blue-accent-dark text-white font-semibold rounded transition-colors group"
+                className="inline-flex items-center justify-center px-8 py-4 bg-[#2EA3F2] hover:bg-[#1e7cc2] text-white font-semibold transition-colors group"
               >
                 <svg className="mr-2 w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M8 5v14l11-7z" />
@@ -109,12 +109,21 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
             {clientLogos.map((logo) => (
-              <span
-                key={logo}
-                className="font-[var(--font-oswald)] text-lg md:text-xl text-gray-400 font-semibold"
-              >
-                {logo}
-              </span>
+              <div key={logo.name} className="h-12 flex items-center">
+                {logo.image ? (
+                  <Image
+                    src={logo.image}
+                    alt={logo.name}
+                    width={120}
+                    height={48}
+                    className="h-8 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity"
+                  />
+                ) : (
+                  <span className="font-[var(--font-oswald)] text-lg md:text-xl text-gray-400 font-semibold">
+                    {logo.name}
+                  </span>
+                )}
+              </div>
             ))}
           </div>
         </div>
@@ -144,8 +153,8 @@ export default function HomePage() {
               </a>
               <a
                 href="https://www.youtube.com/watch?v=GgUqd_u84Vg"
-                target="_blank"
-                rel="noopener noreferrer"
+            target="_blank"
+            rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-6 py-3 border-2 border-white/30 text-white hover:bg-white/10 font-semibold rounded transition-colors"
               >
                 <svg className="mr-2 w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -187,7 +196,7 @@ export default function HomePage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="font-[var(--font-oswald)] text-4xl md:text-5xl font-bold text-white mb-4">
+            <h2 className="font-[var(--font-bitter)] text-4xl md:text-5xl font-bold text-white mb-4">
               KEYNOTE <span className="text-copper">PROGRAMS</span>
             </h2>
             <p className="text-text-secondary text-lg max-w-2xl mx-auto">
@@ -214,13 +223,13 @@ export default function HomePage() {
                     {keynote.themes.map((theme) => (
                       <span
                         key={theme}
-                        className="px-3 py-1 bg-copper/20 text-copper text-sm rounded-full"
+                        className="themes-home"
                       >
                         {theme}
                       </span>
                     ))}
                   </div>
-                  <h3 className="font-[var(--font-oswald)] text-3xl font-bold text-white mb-2">
+                  <h3 className="font-[var(--font-bitter)] text-3xl font-bold text-white mb-2">
                     {keynote.title}
                   </h3>
                   <p className="text-copper text-lg mb-4">{keynote.subtitle}</p>
@@ -263,20 +272,19 @@ export default function HomePage() {
                   </Link>
                 </div>
 
-                {/* Image Placeholder */}
+                {/* Image */}
                 <div
-                  className={`bg-card-bg rounded-2xl aspect-video flex items-center justify-center border border-card-border ${
+                  className={`relative rounded-2xl aspect-[3/2] overflow-hidden border border-card-border ${
                     index % 2 === 1 ? "lg:col-start-1" : ""
                   }`}
                 >
-                  <div className="text-center p-8">
-                    <div className="w-20 h-20 mx-auto mb-4 bg-copper/20 rounded-full flex items-center justify-center">
-                      <svg className="w-10 h-10 text-copper" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                      </svg>
-                    </div>
-                    <p className="text-text-secondary">Keynote Preview</p>
-                  </div>
+                  <Image
+                    src={keynote.image}
+                    alt={keynote.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
                 </div>
               </motion.div>
             ))}
@@ -294,7 +302,7 @@ export default function HomePage() {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <p className="font-[var(--font-oswald)] text-2xl md:text-3xl text-white leading-relaxed mb-6">
+            <p className="font-[var(--font-bitter)] text-2xl md:text-3xl text-white leading-relaxed mb-6">
               &ldquo;I have seen thousands of presentations as an audiovisual 
               professional…the way he was able to convey his message with deep 
               meaning really transformed the audience today. He made us laugh 
@@ -325,8 +333,8 @@ export default function HomePage() {
               </p>
               <a
                 href="https://www.amazon.com/dp/B0B167WWVM"
-                target="_blank"
-                rel="noopener noreferrer"
+            target="_blank"
+            rel="noopener noreferrer"
                 className="inline-flex items-center px-6 py-3 bg-copper hover:bg-copper-dark text-background font-semibold rounded transition-colors"
               >
                 Order Now
@@ -354,10 +362,13 @@ export default function HomePage() {
               className="flex justify-center"
             >
               <div className="bg-card-bg rounded-2xl p-8 border border-card-border">
-                <div className="w-64 h-80 bg-gradient-to-b from-copper/20 to-copper/5 rounded-lg flex items-center justify-center">
-                  <span className="font-[var(--font-oswald)] text-2xl text-copper text-center px-4">
-                    GET ON THE BULL
-                  </span>
+                <div className="relative w-64 h-80 rounded-lg overflow-hidden">
+                  <Image
+                    src="/getonthebullbook.png"
+                    alt="Get On The Bull Book Cover"
+                    fill
+                    className="object-contain"
+                  />
                 </div>
               </div>
             </motion.div>
@@ -374,7 +385,7 @@ export default function HomePage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="font-[var(--font-oswald)] text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="font-[var(--font-bitter)] text-4xl md:text-5xl font-bold text-white mb-6">
               READY TO TRANSFORM YOUR
               <br />
               <span className="text-copper">NEXT EVENT?</span>
